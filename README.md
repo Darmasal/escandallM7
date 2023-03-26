@@ -22,3 +22,18 @@ Funcionalidades:
 *Consulta () // retorna toda la información el producto
 *Alta ()
 *Modificar
+
+
+ARCHIVO DE CONFIGURACION:
+
+// Datos de conexió MySQL
+define (SERVER, "localhost");
+define (USERNAME, "nomusuari");
+define (PASSWORD, "paraula clau");
+define (DATABASE, "base de dades");
+
+VISTAS:
+Todas las vistas deven se .view y tener el mismo nombre que el control que se ejecuta.
+CSS basado en: https://bootswatch.com/spacelab/
+
+//

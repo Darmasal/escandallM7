@@ -3,9 +3,9 @@
 # http://www.phpmyadmin.net
 #
 # Servidor: localhost
-# Tiempo de generación: 12-02-2007 a las 19:44:02
-# Versión del servidor: 3.23.54
-# Versión de PHP: 4.0.4pl1
+# Tiempo de generaciï¿½n: 12-02-2007 a las 19:44:02
+# Versiï¿½n del servidor: 3.23.54
+# Versiï¿½n de PHP: 4.0.4pl1
 # 
 # Base de datos : `qe771`
 # 
@@ -94,7 +94,8 @@ CREATE TABLE `e_manufactura` (
 #
 
 CREATE TABLE `e_materies` (
-  `Materia` varchar(10) NOT NULL default '',
+  `Referencia` varchar(10) NOT NULL default '',
+  `Nom` varchar(100) NOT NULL default '',
   `Umesura` varchar(10) NOT NULL default '',
   `Preu` float NOT NULL default '0',
   `Proveidor` varchar(20) NOT NULL default '',

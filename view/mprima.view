@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./view/bootstrap-spacelab.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">AlmataSoft</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.php">Inici
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Escandall</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active" href="index.php?desti=mprima">Materia</a>
+                <span class="visually-hidden">(current)</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Configuraci&oacute;</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+    <div class="form-group" style='margin:3% 10% 0% 10%;'>
+        <form method="get" action="index.php">
+        <label class="form-label mt-4">Alta materia prima</label>
+        <div class="form-group">
+            <label class="col-form-label mt-4" for="referencia">Refer&egrave;ncia</label>
+            <input type="text" class="form-control" placeholder="Referència" id="referencia" name="referencia">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="nom">Nom</label>
+            <input type="text" class="form-control" placeholder="Nom" id="nom" name="nom">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="mesura">Unitat de mesura</label>
+            <input type="text" class="form-control" placeholder="Unitat de mesura" id="mesura" name="mesura">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="preu">Preu</label>
+            <input type="text" class="form-control" placeholder="Preu" id="preu" name="preu">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="proveidor">Proveidor</label>
+            <input type="text" class="form-control" placeholder="Proveidor" id="proveidor" name="proveidor">
+          </div>
+          <div class="form-group">
+          <button type="submit" class="btn btn-primary" name="desti" value="mprima">Submit</button>
+          </div>
+        </form>
+        </div>
+
+
+
+</body>
+</html>
