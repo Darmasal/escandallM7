@@ -2,7 +2,7 @@
 
 include './model/mprima.php';
 
-class ControlMprima {
+class ControlInit {
 
 
     public static function alta($post){
@@ -19,11 +19,7 @@ class ControlMprima {
 
     public static function render($var){
 
-        if (isset($_POST)){
-            if ($_POST["accio"]=="altaconf"){
-                $_POST["accio"]=this.alta($_POST);
-            }
-        }
+        MMprima::reinitDB();
 
         include ('./view/mprima.view');
     }

@@ -38,8 +38,14 @@
         </div>
       </nav>
 
+
+    <?php
+
+    // s'activa només si no hi ha cap acció especificada 
+    if (!isset($_POST["accio"])){
+      ?>
     <div class="form-group" style='margin:3% 10% 0% 10%;'>
-        <form method="get" action="index.php">
+        <form method="POST" action="index.php?desti=mprima">
         <label class="form-label mt-4">Alta materia prima</label>
         <div class="form-group">
             <label class="col-form-label mt-4" for="referencia">Refer&egrave;ncia</label>
@@ -62,12 +68,52 @@
             <input type="text" class="form-control" placeholder="Proveidor" id="proveidor" name="proveidor">
           </div>
           <div class="form-group">
-          <button type="submit" class="btn btn-primary" name="desti" value="mprima">Submit</button>
+          <button type="submit" class="btn btn-primary" name="accio" value="alta">Submit</button>
           </div>
         </form>
         </div>
 
+    <?php 
+    } //En cas de que es produeixi una alta, resposta
+    else if($_POST["accio"]=="alta"){
+      ?>
 
+
+      
+     <div class="card border-primary mb-3" style="max-width: 20rem;">
+  <div class="card-header">Confirmació Alta de Materia prima</div>
+  <div class="card-body">
+    <h4 class="card-title">
+    <?php 
+        echo $_POST["nom"];
+        ?>
+       </h4>
+    <p class="card-text">
+      <?php 
+        echo "Amb referència ".$_POST["referencia"]." a ". $_POST["preu"]." per ". $_POST["mesura"]." del providor ". $_POST["proveidor"];
+       ?>
+       </p>
+          <form method="POST" action="index.php?desti=mprima">
+              <?php 
+               echo "<input type='hidden' name='referencia' value='".$_POST["referencia"]."'>";
+               echo "<input type='hidden' name='nom' value='".$_POST["nom"]."'>";
+               echo "<input type='hidden' name='mesura' value='".$_POST["mesura"]."'>";
+               echo "<input type='hidden' name='preu' value='".$_POST["preu"]."'>";
+               echo "<input type='hidden' name='proveidor' value='".$_POST["proveidor"]."'>";
+               ?>
+              <button type="submit" name="accio" value="altaconf" class="btn btn-primary">Save changes</button>
+              <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </form>
+
+    </div>
+    </div>
+
+   <?php
+    } //
+    else if ($_POST["accio"]=="altaconf"){
+      echo "CONFIRMAO";
+    }
+      ?>
 
 </body>
 </html>

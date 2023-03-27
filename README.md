@@ -40,7 +40,7 @@ docker run --detach --network xarxaescandall --name mariadb_esc --env MARIADB_US
 
 docker run --detach --network xarxaescandall --name lamp_esc -p8080:80 -v /home/almata.cat/daniel.sole/Dev/escandallM7:/var/www/html machines/la_p7
 
-docker cp ./ lamp_esc:/var/www/html
+Si no se asigna el -v --> docker cp ./ lamp_esc:/var/www/html
 
 VISTAS:
 Todas las vistas deven se .view y tener el mismo nombre que el control que se ejecuta.
