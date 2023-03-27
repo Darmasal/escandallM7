@@ -27,10 +27,20 @@ Funcionalidades:
 ARCHIVO DE CONFIGURACION:
 
 // Datos de conexió MySQL
-define (SERVER, "localhost");
-define (USERNAME, "nomusuari");
-define (PASSWORD, "paraula clau");
-define (DATABASE, "base de dades");
+define ("SERVER", "localhost");
+define ("USERNAME", "nomusuari");
+define ("PASSWORD", "paraula clau");
+define ("DATABASE", "base de dades");
+
+DOCKER:
+
+docker network create xarxaescandall
+
+docker run --detach --network xarxaescandall --name mariadb_esc --env MARIADB_USER=nomusuari --env MARIADB_PASSWORD=pass --env MARIADB_DATABASE=database --env MARIADB_ROOT_PASSWORD=passroot mariadb:10.11
+
+docker run --detach --network xarxaescandall --name lamp_esc -p8080:80 -v /home/almata.cat/daniel.sole/Dev/escandallM7:/var/www/html machines/la_p7
+
+docker cp ./ lamp_esc:/var/www/html
 
 VISTAS:
 Todas las vistas deven se .view y tener el mismo nombre que el control que se ejecuta.
